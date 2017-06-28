@@ -12,12 +12,8 @@ $(document).ready(function(){
 
 			$("#btn-eliminar").click(function(){
 				$(this).parent().remove();
-				this.remove();
+				/*this.remove();*/
 			})
 		}	
-
-		
 	});
-
-	
 });
