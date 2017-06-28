@@ -11,16 +11,28 @@
 	width: auto;
 }
 
-.container-box{
+.box{
 	background-color: rgba(250,244,227,0.7);
 }
 
-.container-box h1{
+.box h1{
 	font-family: 'Patrick Hand SC', cursive;
 }
 
-.container-box input{
+.box input ul{
 	font-family: 'Josefin Sans', sans-serif;
-	font-size: 50px;
 }
+
+[type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+    position: relative;
+    left: 0px;
+    opacity: 1;
+}
+
+.btn-eliminar {
+    width: 2px;
+    padding-right: 6px;
+    padding-left: 28px;
+}
+
 
