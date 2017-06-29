@@ -19,15 +19,11 @@ $(document).ready(function(){
 		$(this).parent().remove();
 	});
 
-	$(document).on('click','.checkbox',function(e){
-		e.preventDefault();
+	$(document).on('change','.checkbox',function(){
 
-		if($(this).prop('checked', true))
-    	{
-      		$(this).prop('checked', false);
+		if($(this).prop('checked')){
+    		$(this).parent().replaceAll('#list-finish');
     	}
-
-    	$(this).parent().replaceAll('#list-finish');
 	});
 });
 
