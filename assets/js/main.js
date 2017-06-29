@@ -1,4 +1,5 @@
 $(document).ready(function(){
+
 	$(".btn").click(function(e){
 		e.preventDefault();
 
@@ -7,13 +8,27 @@ $(document).ready(function(){
 		if(tareaNueva == ""){
 			alert("Debes escribir una tarea");
 		}else{
-			$("#listaTareas").append("<li><input type=checkbox>" + "<span id='tareaAgregada'>" + tareaNueva + "</span>" + "<a class='waves-effect waves-light btn pink' id='btn-eliminar'><i class='material-icons right'>delete</i></a>");
-			$("#tareaNueva").val("");
+			$("#list-items").append("<li><input type='checkbox' class='checkbox'/>" + tareaNueva + "<a class='waves-effect waves-light btn pink remove'><i class='material-icons right'>delete</i></a></li>");
 
-			$("#btn-eliminar").click(function(){
-				$(this).parent().remove();
-				/*this.remove();*/
-			})
-		}	
+			$("#tareaNueva").val("");
+			}
+	});
+
+	$(document).on('click', '.remove', function()
+	{
+		$(this).parent().remove();
+	});
+
+	$(document).on('click','.checkbox',function(e){
+		e.preventDefault();
+
+		if($(this).prop('checked', true))
+    	{
+      		$(this).prop('checked', false);
+    	}
+
+    	$(this).parent().replaceAll('#list-finish');
 	});
 });
+
+	
